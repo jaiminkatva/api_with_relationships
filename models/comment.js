@@ -1,3 +1,4 @@
+// export sequelize and datatypes for properties of models 
 module.exports = (sequelize, DataTypes) => {
 
     const Comment = sequelize.define("comment", {
