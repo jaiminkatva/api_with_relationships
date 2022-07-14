@@ -20,6 +20,5 @@ router.delete("/:id", postController.deletePost);
 // one post many comments router
 router.get("/oneTomany/:id", postController.oneTomany);
 
-router.get("/getPublise", postController.getPublise);
 
 module.exports = router;
