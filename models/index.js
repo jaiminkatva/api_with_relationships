@@ -19,6 +19,7 @@ const sequelize = new Sequelize(
     }
 )
 
+// check database connection 
 sequelize.authenticate()
     .then(() => {
         console.log("connected");
@@ -32,14 +33,17 @@ const db = {}
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+// model define
 db.post = require("./post")(sequelize, DataTypes)
 db.comment = require("./comment")(sequelize, DataTypes)
 
+// table sync
 db.sequelize.sync({ force: false })
     .then(() => {
         console.log("Yes re-sync");
     })
 
+// one to many relation ship
 db.post.hasMany(db.comment, {
     foreignkey: 'postId',
     as: 'comment'
