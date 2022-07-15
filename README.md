@@ -1,2 +1,2 @@
 # api_with_relationships
-i try to make api with one to one, one to many and many to many relationship.
+i make this api though sequelize. in this project we done one to many relationship. 
